@@ -625,7 +625,7 @@ async function loadEventData() {
   try {
     // Local HTML has no same-origin server. The public repository mirrors the deployed data.
     const url = location.protocol === 'file:'
-      ? 'https://raw.githubusercontent.com/kode0405/dongne-hannune-map/main/events.json'
+      ? 'https://raw.githubusercontent.com/kode0405/dongne-hannune-map/refs/heads/main/events.json'
       : './events.json';
     const response = await fetch(url, {cache: 'no-store', signal: controller.signal});
     if (!response.ok) throw new Error('HTTP ' + response.status);
